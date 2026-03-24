@@ -16,7 +16,7 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     users.ryan = {
-      imports = [../../modules/nvim/default.nix];
+      imports = [../../modules/default.nix];
       config.modules = {
         nvim.enable = true;
       };

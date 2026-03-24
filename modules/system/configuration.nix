@@ -51,7 +51,20 @@
   environment.systemPackages = with pkgs; [
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    git
   ];
+
+  environment.variables = {
+    NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";
+    NIXOS_CONFIG_DIR = "$HOME/.config/nixos/";
+    EDITOR = "nvim";
+  };
+
+  nix = {
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

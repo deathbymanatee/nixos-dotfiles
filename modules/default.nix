@@ -1,4 +1,4 @@
-{ inputs, pkgs, config, home-manager, ... }:
+{ inputs, pkgs, config, ... }:
 
 {
   home.stateVersion = "25.11";
