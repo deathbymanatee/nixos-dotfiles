@@ -8,6 +8,7 @@
 with lib;
 let
   cfg = config.modules.plasma;
+  konsave = pkgs.callPackage ./konsave/package.nix;
 
 in
 {
@@ -22,7 +23,6 @@ in
       wayland-utils
       keepassxc
       papirus-icon-theme
-      konsave
     ];
   };
 }
