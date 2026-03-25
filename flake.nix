@@ -10,7 +10,12 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, nix-ld, ... }:
+    inputs@{
+      nixpkgs,
+      home-manager,
+      nix-ld,
+      ...
+    }:
     {
       nixosConfigurations = {
         virt-manager = nixpkgs.lib.nixosSystem {
