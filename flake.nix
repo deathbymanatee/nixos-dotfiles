@@ -10,13 +10,14 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }:
+    inputs@{ nixpkgs, home-manager, nix-ld, ... }:
     {
       nixosConfigurations = {
         virt-manager = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             home-manager.nixosModules.home-manager
+            nix-ld.nixosModules.nix-ld
             ./modules/system/configuration.nix
             ./hosts/virt-manager/user.nix
           ];
@@ -25,6 +26,7 @@
           system = "x86_64-linux";
           modules = [
             home-manager.nixosModules.home-manager
+            nix-ld.nixosModules.nix-ld
             ./modules/system/configuration.nix
             ./hosts/framework-13/user.nix
           ];

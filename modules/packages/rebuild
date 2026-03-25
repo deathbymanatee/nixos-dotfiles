@@ -1,0 +1,4 @@
+hostname=$(hostname)
+cd $NIXOS_CONFIG_DIR
+git add .
+sudo nixos-rebuild switch --flake .#$hostname

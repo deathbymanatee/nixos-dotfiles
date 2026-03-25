@@ -9,6 +9,7 @@ with lib;
 let
   cfg = config.modules.packages;
   maintenance = pkgs.writeShellScriptBin "maintenance" ''${builtins.readFile ./maintenance}'';
+  rebuild = pkgs.writeShellScriptBin "rebuild" ''${builtins.readFile ./rebuild}'';
 
 in
 {
@@ -18,6 +19,7 @@ in
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       maintenance
+      rebuild
       btop
     ];
   };

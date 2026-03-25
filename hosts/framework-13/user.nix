@@ -1,4 +1,8 @@
-{ config, pkgs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -21,9 +25,7 @@
 
   programs.ssh.startAgent = true;
   programs.nix-ld.libraries = with pkgs; [
-    (runCommand "steamrun-lib" { }
-      "mkdir $out; ln -s ${inputs.pkgs.steam-run.fhsenv}/usr/lib64 $out/lib"
-    )
+    (pkgs.runCommand "steamrun-lib" { } "mkdir $out; ln -s ${pkgs.steam-run.fhsenv}/usr/lib64 $out/lib")
   ];
 
   home-manager = {
