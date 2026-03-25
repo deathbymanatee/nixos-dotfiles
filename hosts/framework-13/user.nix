@@ -20,6 +20,11 @@
   time.timeZone = "America/Chicago";
 
   programs.ssh.startAgent = true;
+  programs.nix-ld.libraries = with pkgs; [
+    (runCommand "steamrun-lib" { }
+      "mkdir $out; ln -s ${inputs.pkgs.steam-run.fhsenv}/usr/lib64 $out/lib"
+    )
+  ];
 
   home-manager = {
     useUserPackages = true;

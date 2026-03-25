@@ -158,9 +158,15 @@ plugin=org.kde.plasma.clipboard
 immutability=1
 plugin=org.kde.plasma.manage-inputmethod
 
+[Containments][2][Applets][7][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
 [Containments][2][Applets][7][General]
-extraItems=org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.notifications,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.battery,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kscreen,org.kde.plasma.brightness,org.kde.plasma.weather,org.kde.plasma.keyboardindicator
+extraItems=org.kde.plasma.cameraindicator,org.kde.plasma.notifications,org.kde.plasma.mediacontroller,org.kde.kscreen,org.kde.plasma.weather,org.kde.plasma.brightness,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.volume,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.battery
+hiddenItems=org.kde.plasma.brightness,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardlayout,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.keyboardindicator
 knownItems=org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.notifications,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.battery,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kscreen,org.kde.plasma.brightness,org.kde.plasma.weather,org.kde.plasma.keyboardindicator
+shownItems=org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.battery
 
 [Containments][2][General]
 AppletOrder=3;5;6;7;19;20
