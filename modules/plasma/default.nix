@@ -26,7 +26,7 @@ in
       konsave
     ];
     home.file.".config/konsave" = {
-      source = config.lib.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos/modules/plasma/konsave";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos/modules/plasma/konsave";
       recursive = true;
     };
   };
