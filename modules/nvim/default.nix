@@ -16,14 +16,10 @@ in
     enable = mkEnableOption "nvim";
   };
   config = mkIf cfg.enable {
-    home.activation.copyConfig = mkAfter ''
-      if [! -d "${config.home.homeDirectory}/.config/nvim" ]; then
-        cp -r "${nvimConfigPath}" ${config.home.homeDirectory}/.config/nvim
-
-        chown -R $USER ${config.home.homedirectory}/.config/nvim
-        chmod -R u+rw ${config.home.homeDirectory}/.config/nvim
-      fi
-    '';
+    home.file.".config/nvim/" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos/modules/nvim/nvim";
+      recursive = true;
+    };
     home.packages = with pkgs; [
       luajit
       ripgrep

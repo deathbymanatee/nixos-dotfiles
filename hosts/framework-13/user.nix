@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/plasma/core.nix
   ];
 
   networking.hostName = "framework-13";
@@ -15,6 +16,11 @@
     ];
   };
 
+  # Set your time zone.
+  time.timeZone = "America/Chicago";
+
+  programs.ssh.startAgent = true;
+
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
@@ -22,6 +28,9 @@
       imports = [ ../../modules/default.nix ];
       config.modules = {
         nvim.enable = true;
+        librewolf.enable = true;
+        plasma.enable = true;
+        packages.enable = true;
       };
     };
   };

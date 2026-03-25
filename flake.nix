@@ -7,6 +7,7 @@
     nix-ld.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    self.submodules = true;
   };
 
   outputs =
@@ -19,6 +20,14 @@
             home-manager.nixosModules.home-manager
             ./modules/system/configuration.nix
             ./hosts/virt-manager/user.nix
+          ];
+        };
+        framework-13 = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            home-manager.nixosModules.home-manager
+            ./modules/system/configuration.nix
+            ./hosts/framework-13/user.nix
           ];
         };
       };
