@@ -4,15 +4,14 @@
   fetchPypi,
 }:
 
-python3Packages.buildPythonPackage rec {
+python3Packages.buildPythonApplication rec {
   pname = "konsave";
   version = "2.3.0";
   format = "pyproject";
 
   src = fetchPypi {
-    inherit version;
-    pname = "Konsave";
-    hash = "sha256-tWarqT2jFgCuSsa2NwMHRaR3/wj0khiRHidvRNMwM8M=";
+    inherit version pname;
+    hash = "sha256-Qe+RZIsgbqvFqWhUkfACbYvHtXQcp6yK+XrvqgXnlTc=";
   };
 
   build-system = with python3Packages; [

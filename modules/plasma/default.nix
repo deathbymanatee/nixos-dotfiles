@@ -8,7 +8,7 @@
 with lib;
 let
   cfg = config.modules.plasma;
-  konsave = pkgs.callPackage ./konsave/package.nix;
+  konsave = pkgs.callPackage ./konsave/package.nix { };
 
 in
 {
@@ -23,6 +23,11 @@ in
       wayland-utils
       keepassxc
       papirus-icon-theme
+      konsave
     ];
+    home.file.".config/konsave" = {
+      source = config.lib.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos/modules/plasma/konsave";
+      recursive = true;
+    };
   };
 }
