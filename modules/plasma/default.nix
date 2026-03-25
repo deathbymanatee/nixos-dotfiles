@@ -21,6 +21,7 @@ in
       wl-clipboard
       wayland-utils
       keepassxc
+      papirus-icon-theme
     ];
   };
 }
