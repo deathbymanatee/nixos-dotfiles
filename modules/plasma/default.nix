@@ -22,6 +22,7 @@ in
       wayland-utils
       keepassxc
       papirus-icon-theme
+      konsave
     ];
   };
 }
