@@ -24,6 +24,7 @@ in
       luajit
       ripgrep
       clang
+      nerd-fonts.jetbrains-mono
     ];
   };
 }

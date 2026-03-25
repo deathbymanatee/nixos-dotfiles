@@ -1,4 +1,9 @@
-{ inputs, pkgs, config, ... }:
+{
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
 
 {
   home.stateVersion = "25.11";
@@ -8,5 +13,6 @@
     ./librewolf
     ./libreoffice
     ./packages
+    ./foot
   ];
 }
