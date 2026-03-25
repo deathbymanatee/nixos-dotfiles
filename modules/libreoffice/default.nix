@@ -7,12 +7,12 @@
 
 with lib;
 let
-  cfg = config.modules.librewolf;
+  cfg = config.modules.libreoffice;
 
 in
 {
-  options.modules.librewolf = {
-    enable = mkEnableOption "librewolf";
+  options.modules.libreoffice = {
+    enable = mkEnableOption "libreoffice";
   };
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
