@@ -33,5 +33,7 @@ in
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos/modules/plasma/konsave";
       recursive = true;
     };
+    home.file."Pictures/Wallpapers/Forest For The Trees.jpg".source =
+      ./wallpapers/Forest_For_The_Trees.jpg;
   };
 }
