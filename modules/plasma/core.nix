@@ -1,7 +1,6 @@
 {
   pkgs,
-  lib,
-  config,
+  inputs,
   ...
 }:
 
@@ -11,4 +10,7 @@
     displayManager.sddm.enable = true;
     displayManager.sddm.wayland.enable = true;
   };
+  environment.systemPackages = with pkgs; [
+    inputs.kwin-effects-glass.packages.${pkgs.system}.default
+  ];
 }

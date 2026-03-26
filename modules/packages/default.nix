@@ -8,8 +8,8 @@
 with lib;
 let
   cfg = config.modules.packages;
-  maintenance = pkgs.writeShellScriptBin "maintenance" ''${builtins.readFile ./maintenance}'';
-  rebuild = pkgs.writeShellScriptBin "rebuild" ''${builtins.readFile ./rebuild}'';
+  maintenance = pkgs.writeShellScriptBin "maintenance" "${builtins.readFile ./maintenance}";
+  rebuild = pkgs.writeShellScriptBin "rebuild" "${builtins.readFile ./rebuild}";
 
 in
 {

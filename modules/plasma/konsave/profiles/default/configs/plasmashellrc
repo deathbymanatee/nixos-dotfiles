@@ -1,7 +1,16 @@
 [PlasmaViews][Panel 2]
 floating=1
+panelLengthMode=0
+panelOpacity=0
 
 [PlasmaViews][Panel 2][Defaults]
+thickness=44
+
+[PlasmaViews][Panel 28]
+floating=1
+panelOpacity=0
+
+[PlasmaViews][Panel 28][Defaults]
 thickness=44
 
 [Updates]

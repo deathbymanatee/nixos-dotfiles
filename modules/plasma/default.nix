@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   ...
 }:
 
@@ -23,6 +24,8 @@ in
       wayland-utils
       keepassxc
       papirus-icon-theme
+      python313Packages.kde-material-you-colors
+      themechanger
       konsave
     ];
     home.file.".config/konsave" = {

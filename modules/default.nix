@@ -14,5 +14,6 @@
     ./libreoffice
     ./packages
     ./foot
+    ./fastfetch
   ];
 }

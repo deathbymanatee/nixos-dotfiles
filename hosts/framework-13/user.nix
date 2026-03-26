@@ -38,6 +38,7 @@
         librewolf.enable = true;
         plasma.enable = true;
         packages.enable = true;
+        fastfetch.enable = true;
       };
     };
   };

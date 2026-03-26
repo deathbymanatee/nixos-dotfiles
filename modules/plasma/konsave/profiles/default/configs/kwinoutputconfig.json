@@ -4,8 +4,17 @@
             {
                 "allowDdcCi": true,
                 "allowSdrSoftwareBrightness": false,
+                "autoBrightnessCurve": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
                 "autoRotation": "InTabletMode",
-                "brightness": 0.6,
+                "automaticBrightness": false,
+                "brightness": 0.7,
                 "colorPowerTradeoff": "PreferEfficiency",
                 "colorProfileSource": "sRGB",
                 "connectorName": "eDP-1",
@@ -26,6 +35,7 @@
                 "scale": 1.5,
                 "sdrBrightness": 200,
                 "sdrGamutWideness": 0,
+                "sharpness": 0,
                 "transform": "Normal",
                 "uuid": "2407b63d-5a07-4c7a-8c1d-722d7f11062d",
                 "vrrPolicy": "Never",
@@ -34,7 +44,16 @@
             {
                 "allowDdcCi": true,
                 "allowSdrSoftwareBrightness": true,
+                "autoBrightnessCurve": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
                 "autoRotation": "InTabletMode",
+                "automaticBrightness": false,
                 "brightness": 1,
                 "colorPowerTradeoff": "PreferEfficiency",
                 "colorProfileSource": "sRGB",
@@ -57,6 +76,7 @@
                 "scale": 1,
                 "sdrBrightness": 200,
                 "sdrGamutWideness": 0,
+                "sharpness": 0,
                 "transform": "Normal",
                 "uuid": "4ca21fab-4bb3-49c5-8dd6-e47e3f962c96",
                 "vrrPolicy": "Never",
@@ -65,7 +85,16 @@
             {
                 "allowDdcCi": true,
                 "allowSdrSoftwareBrightness": true,
+                "autoBrightnessCurve": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
                 "autoRotation": "InTabletMode",
+                "automaticBrightness": false,
                 "brightness": 1,
                 "colorPowerTradeoff": "PreferEfficiency",
                 "colorProfileSource": "sRGB",
@@ -88,6 +117,7 @@
                 "scale": 1,
                 "sdrBrightness": 200,
                 "sdrGamutWideness": 0,
+                "sharpness": 0,
                 "transform": "Normal",
                 "uuid": "4ae80a43-b5a7-432e-87e2-a23280f492f2",
                 "vrrPolicy": "Never",

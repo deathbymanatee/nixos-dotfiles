@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -31,6 +36,7 @@
         librewolf.enable = true;
         plasma.enable = true;
         packages.enable = true;
+        fastfetch.enable = true;
       };
     };
   };
