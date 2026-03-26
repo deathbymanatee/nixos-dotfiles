@@ -20,6 +20,7 @@ in
     home.packages = with pkgs; [
       kdePackages.wayland
       kdePackages.plasma-nm
+      kdePackages.flatpak-kcm
       wl-clipboard
       wayland-utils
       keepassxc
