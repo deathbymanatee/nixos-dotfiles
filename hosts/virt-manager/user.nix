@@ -37,6 +37,7 @@
         plasma.enable = true;
         packages.enable = true;
         fastfetch.enable = true;
+        dev-tools.enable = true;
       };
     };
   };

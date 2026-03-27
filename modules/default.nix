@@ -15,5 +15,6 @@
     ./packages
     ./foot
     ./fastfetch
+    ./dev-tools
   ];
 }
