@@ -11,5 +11,6 @@
   };
   environment.systemPackages = with pkgs; [
     inputs.kwin-effects-glass.packages.${pkgs.stdenv.hostPlatform.system}.default
+    papirus-icon-theme
   ];
 }
