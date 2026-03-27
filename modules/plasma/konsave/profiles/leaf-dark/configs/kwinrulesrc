@@ -1,0 +1,26 @@
+[0aebf939-a0c8-4e97-b3da-9e50b7b7aa68]
+Description=Window settings for systemsettings
+opacityactive=90
+opacityactiverule=2
+opacityinactive=90
+opacityinactiverule=2
+title=Desktop Effects — System Settings
+wmclass=systemsettings
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=2
+rules=0aebf939-a0c8-4e97-b3da-9e50b7b7aa68,d59fa720-ec29-456a-b289-9e9dcfd67950
+
+[d59fa720-ec29-456a-b289-9e9dcfd67950]
+Description=Window settings for org.kde.konsole
+opacityactive=90
+opacityactiverule=2
+opacityinactive=90
+opacityinactiverule=2
+title=~ : bash — Konsole
+types=1
+wmclass=konsole org.kde.konsole
+wmclasscomplete=true
+wmclassmatch=1
