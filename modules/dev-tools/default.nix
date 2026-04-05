@@ -18,6 +18,8 @@ in
     home.packages = with pkgs; [
       rustup
       bruno
+      tmux
+      ncdu
     ];
   };
 }

@@ -16,5 +16,7 @@
     ./foot
     ./fastfetch
     ./dev-tools
+    ./steam
+    ./discord
   ];
 }
