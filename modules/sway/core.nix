@@ -5,10 +5,8 @@
 }:
 
 {
-  services = {
-    displayManager.lemurs.enable = true;
-  };
+  services.displayManager.lemurs.enable = true;
   environment.systemPackages = with pkgs; [
-    river
+    sway
   ];
 }

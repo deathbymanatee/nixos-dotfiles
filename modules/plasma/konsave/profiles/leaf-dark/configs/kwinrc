@@ -24,6 +24,10 @@ NightTemperature=4000
 blurEnabled=false
 glassEnabled=true
 
+[Tiling][893e1efd-d123-47fa-bb39-1430f633bdb3][1500277a-6498-4aa0-ba2c-435bd4717adc]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][893e1efd-d123-47fa-bb39-1430f633bdb3][2407b63d-5a07-4c7a-8c1d-722d7f11062d]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -33,6 +37,10 @@ padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][893e1efd-d123-47fa-bb39-1430f633bdb3][4ca21fab-4bb3-49c5-8dd6-e47e3f962c96]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][c660d35a-af00-4918-8504-b3a5cc44bab3][1500277a-6498-4aa0-ba2c-435bd4717adc]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -49,7 +57,7 @@ padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Xwayland]
-Scale=1
+Scale=1.5
 
 [org.kde.kdecoration2]
 BorderSize=Normal

@@ -18,5 +18,7 @@
     ./dev-tools
     ./steam
     ./discord
+    ./kwm # DOESN'T WORK DON'T USE THIS
+    ./sway
   ];
 }

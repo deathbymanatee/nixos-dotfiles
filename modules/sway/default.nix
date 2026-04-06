@@ -7,16 +7,18 @@
 
 with lib;
 let
-  cfg = config.modules.river;
+  cfg = config.modules.sway;
 
 in
 {
-  options.modules.river = {
-    enable = mkEnableOption "river";
+  options.modules.sway = {
+    enable = mkEnableOption "sway";
   };
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      river
+      foot
+      wl-clipboard-rs
+      wmenu
     ];
   };
 }

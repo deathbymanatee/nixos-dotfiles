@@ -139,9 +139,6 @@ plugin=org.kde.plasma.battery
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
-[Containments][2][Applets][7][Applets][23][Configuration]
-PreloadWeight=18
-
 [Containments][2][Applets][7][Applets][8]
 immutability=1
 plugin=org.kde.plasma.clipboard
@@ -165,6 +162,7 @@ AppletOrder=3;5;6;7;19;20
 
 [Containments][24]
 ItemGeometries-1920x1080=
+ItemGeometries-3440x1440=
 ItemGeometriesHorizontal=
 activityId=463f4228-f95e-4d38-9151-4b0fd01381d1
 formfactor=0
@@ -300,6 +298,10 @@ plugin=org.kde.plasma.battery
 immutability=1
 plugin=org.kde.plasma.brightness
 
+[Containments][28][Applets][34][Applets][73]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
 [Containments][28][Applets][34][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
@@ -431,6 +433,10 @@ plugin=org.kde.plasma.battery
 [Containments][52][Applets][55][Applets][68]
 immutability=1
 plugin=org.kde.plasma.brightness
+
+[Containments][52][Applets][55][Applets][72]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
 
 [Containments][52][Applets][55][ConfigDialog]
 DialogHeight=630

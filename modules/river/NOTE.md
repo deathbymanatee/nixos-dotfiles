@@ -1,0 +1,1 @@
+this package is TOTALLY BROKEN RIGHT NOW, if you try to include this module and corresponding KWM module it will FAIL and you will NOT have a gui. working on this gave me conniptions so i just installed sway instead.

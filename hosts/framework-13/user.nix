@@ -8,6 +8,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/plasma/core.nix
+    # ../../modules/sway/core.nix
   ];
 
   networking.hostName = "framework-13";
@@ -19,6 +20,7 @@
       "networkmanager"
       "wheel"
       "docker"
+      # "seat"
     ];
   };
 
@@ -27,7 +29,7 @@
   programs.ssh.startAgent = true;
 
   # add external libraries for nix-ld ; not needed for nvim config
-  programs.nix-ld.libraries = with pkgs; [
+  programs.nix-ld.libraries = [
     (pkgs.runCommand "steamrun-lib" { } "mkdir $out; ln -s ${pkgs.steam-run.fhsenv}/usr/lib64 $out/lib")
   ];
 
@@ -43,6 +45,7 @@
         fastfetch.enable = true;
         dev-tools.enable = true;
         plasma.enable = true;
+        # sway.enable = true;
       };
     };
   };

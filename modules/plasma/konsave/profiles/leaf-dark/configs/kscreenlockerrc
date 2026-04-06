@@ -1,3 +1,7 @@
+[Daemon]
+Autolock=false
+Timeout=0
+
 [Greeter][Wallpaper][org.kde.image][General]
 Image=file:///home/ryan/Pictures/Wallpapers/Forest For The Trees.jpg
 PreviewImage=file:///home/ryan/Pictures/Wallpapers/Forest For The Trees.jpg
