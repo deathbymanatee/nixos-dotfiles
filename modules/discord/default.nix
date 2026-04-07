@@ -1,3 +1,5 @@
+# Discord module.
+
 {
   pkgs,
   lib,

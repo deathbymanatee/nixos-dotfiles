@@ -1,3 +1,5 @@
+# Plasma configuration module.
+
 {
   pkgs,
   lib,

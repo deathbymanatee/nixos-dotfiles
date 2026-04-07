@@ -7,7 +7,11 @@ deathbymanatee's nixos dotfiles
 1. Internet connection (duh)
 2. NixOS installed and working with a user account set up
 3. hardware-configuration.nix created 
-4. SSH key enabled and set up
+4. SSH key enabled and set up (contributors only)
+
+## Structure
+
+See [tree.md](./tree.md) for the current overall file structure.
 
 ## Installation 
 
@@ -18,9 +22,11 @@ deathbymanatee's nixos dotfiles
 
 ## Post-install
 
-I opted to abstain configuring individual programs using Nix and home-manager, as it created a read-only filesystem nightmare for someone who's configurations are [mostly] always being updated. I instead chose to use mkOutOfStoreSymlink and used relative paths to the various modules' config directories which seems to be working much better for my use case.
+I opted to abstain configuring individual programs using Nix and home-manager, as it created a read-only filesystem nightmare for someone who's configurations are (mostly) always being updated. I also didn't feel like doing a full rebuild or home-switch when experimenting with one or two changes at a time. I instead chose to use mkOutOfStoreSymlink and used relative paths to the various modules' config directories which seems to be working much better for my use case.
 
 ## Module setup
+
+Certain modules require a `core.nix` component for configuring system services. 
 
 ### Plasma 
 

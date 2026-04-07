@@ -8,7 +8,6 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/plasma/core.nix
-    # ../../modules/sway/core.nix
   ];
 
   networking.hostName = "framework-13";
@@ -20,7 +19,6 @@
       "networkmanager"
       "wheel"
       "docker"
-      # "seat"
     ];
   };
 
@@ -33,11 +31,23 @@
     (pkgs.runCommand "steamrun-lib" { } "mkdir $out; ln -s ${pkgs.steam-run.fhsenv}/usr/lib64 $out/lib")
   ];
 
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    btop-rocm
+  ];
+
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
     users.ryan = {
       imports = [ ../../modules/default.nix ];
+
       config.modules = {
         nvim.enable = true;
         librewolf.enable = true;
@@ -45,7 +55,7 @@
         fastfetch.enable = true;
         dev-tools.enable = true;
         plasma.enable = true;
-        # sway.enable = true;
+        uncategorized.enable = true;
       };
     };
   };

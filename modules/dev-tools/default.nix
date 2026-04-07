@@ -1,3 +1,5 @@
+# Common build tools / programs needed for general development.
+
 {
   pkgs,
   lib,

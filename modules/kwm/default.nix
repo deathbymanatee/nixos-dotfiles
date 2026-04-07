@@ -17,7 +17,15 @@ in
     home.packages = with pkgs; [
       foot
       wmenu
-      wl-clipboard-rs
+      # wl-clipboard-rs
+      wdisplays
+      swayidle
+      waylock
+      grim
+      slurp
+      wf-recorder
+      dunst
+      swaybg
     ];
   };
 }
