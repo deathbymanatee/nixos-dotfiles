@@ -17,8 +17,21 @@ in
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       foot
-      wl-clipboard-rs
       wmenu
+      wl-clipboard-rs
+      way-displays
+      wdisplays
+      swayidle
+      waylock
+      grim
+      slurp
+      wf-recorder
+      dunst
+      swaybg
+      keepassxc
+      vlc
+      kdePackages.ark
+      kdePackages.qt6ct
     ];
   };
 }

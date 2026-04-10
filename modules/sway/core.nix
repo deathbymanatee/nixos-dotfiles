@@ -5,8 +5,13 @@
 }:
 
 {
-  services.displayManager.lemurs.enable = true;
+  services.displayManager.lemurs = {
+    enable = true;
+    settings = {
+
+    };
+  };
   environment.systemPackages = with pkgs; [
-    sway
+    swayfx
   ];
 }

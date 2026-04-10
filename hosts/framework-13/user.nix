@@ -7,15 +7,16 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/plasma/core.nix
+    ../../modules/sway/core.nix
   ];
 
   networking.hostName = "framework-13";
-  virtualisation.docker.enable = true;
 
-  programs.virt-manager.enable = true;
-  virtualisation.libvirtd.enable = true;
-  virtualisation.spiceUSBRedirection.enable = true;
+  # virtualization packages
+  # virtualisation.docker.enable = true;
+  # programs.virt-manager.enable = true;
+  # virtualisation.libvirtd.enable = true;
+  # virtualisation.spiceUSBRedirection.enable = true;
 
   users.users.ryan = {
     isNormalUser = true;
@@ -24,8 +25,8 @@
       "wheel"
       "docker"
       "libvirtd"
-      # "seat"
-      # "input"
+      "seat"
+      "input"
     ];
   };
 
@@ -64,7 +65,7 @@
         dev-tools.enable = true;
         game-dev.enable = true;
         audio-prod.enable = true;
-        plasma.enable = true;
+        sway.enable = true;
       };
     };
   };
