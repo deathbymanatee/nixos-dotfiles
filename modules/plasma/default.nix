@@ -29,6 +29,7 @@ in
       python313Packages.kde-material-you-colors
       themechanger
       konsave
+      joplin-desktop
     ];
     home.file.".config/konsave" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/nixos/modules/plasma/konsave";

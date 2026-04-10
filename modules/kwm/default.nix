@@ -17,8 +17,8 @@ in
     home.packages = with pkgs; [
       foot
       wmenu
-      # wl-clipboard-rs
-      wdisplays
+      wl-clipboard-rs
+      way-displays
       swayidle
       waylock
       grim
@@ -26,6 +26,10 @@ in
       wf-recorder
       dunst
       swaybg
+      keepassxc
+      vlc
+      kdePackages.ark
+      kdePackages.qt6ct
     ];
   };
 }

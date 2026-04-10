@@ -13,12 +13,19 @@
   networking.hostName = "framework-13";
   virtualisation.docker.enable = true;
 
+  programs.virt-manager.enable = true;
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+
   users.users.ryan = {
     isNormalUser = true;
     extraGroups = [
       "networkmanager"
       "wheel"
       "docker"
+      "libvirtd"
+      # "seat"
+      # "input"
     ];
   };
 
@@ -39,6 +46,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # amd specific resource btop which is why it's here and not in system/configuration.nix module
     btop-rocm
   ];
 
@@ -54,8 +62,9 @@
         packages.enable = true;
         fastfetch.enable = true;
         dev-tools.enable = true;
+        game-dev.enable = true;
+        audio-prod.enable = true;
         plasma.enable = true;
-        uncategorized.enable = true;
       };
     };
   };

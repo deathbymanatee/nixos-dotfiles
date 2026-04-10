@@ -20,6 +20,7 @@
     ./discord
     ./kwm
     ./sway
-    ./uncategorized
+    ./game-dev
+    ./audio-prod
   ];
 }

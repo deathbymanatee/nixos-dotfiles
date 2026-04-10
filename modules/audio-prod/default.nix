@@ -7,23 +7,16 @@
 
 with lib;
 let
-  cfg = config.modules.uncategorized;
+  cfg = config.modules.audio-prod;
 
 in
 {
-  options.modules.uncategorized = {
-    enable = mkEnableOption "uncategorized";
+  options.modules.audio-prod = {
+    enable = mkEnableOption "audio-prod";
   };
   config = mkIf cfg.enable {
-    # uncategorized packages
+    # audio-prod packages
     home.packages = with pkgs; [
-      # gamedev
-      godot
-      blender
-
-      # photoshop
-      gimp
-
       # audio prod
       winePackages.yabridge
       yabridge
