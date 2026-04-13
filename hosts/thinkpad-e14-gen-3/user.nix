@@ -7,7 +7,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/sway/core.nix
+    ../../modules/virtualization/core.nix
   ];
 
   networking.hostName = "framework-13";
@@ -53,13 +53,8 @@
 
       config.modules = {
         nvim.enable = true;
-        librewolf.enable = true;
         packages.enable = true;
         fastfetch.enable = true;
-        dev-tools.enable = true;
-        game-dev.enable = true;
-        audio-prod.enable = true;
-        sway.enable = true;
       };
     };
   };

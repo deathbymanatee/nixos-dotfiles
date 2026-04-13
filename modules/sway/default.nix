@@ -22,7 +22,7 @@ in
       way-displays
       wdisplays
       swayidle
-      waylock
+      swaylock
       grim
       slurp
       wf-recorder
@@ -32,6 +32,7 @@ in
       vlc
       kdePackages.ark
       kdePackages.qt6ct
+      gammastep
     ];
   };
 }

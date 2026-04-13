@@ -30,6 +30,7 @@ in
       vlc
       kdePackages.ark
       kdePackages.qt6ct
+      gammastep
     ];
   };
 }
