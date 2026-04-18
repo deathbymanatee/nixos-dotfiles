@@ -49,6 +49,7 @@ in
       waybar
       networkmanagerapplet
       blueman
+      papirus-icon-theme
     ];
     home.file.".config/sway" = {
       source = config.lib.file.mkOutOfStoreSymLink "${config.home.homeDirectory}/.config/nixos/modules/sway/sway";
