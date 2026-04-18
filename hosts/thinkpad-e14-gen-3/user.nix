@@ -10,7 +10,7 @@
     ../../modules/virtualization/core.nix
   ];
 
-  networking.hostName = "framework-13";
+  networking.hostName = "UVLLAP029";
 
   users.users.ryan = {
     isNormalUser = true;
@@ -50,7 +50,6 @@
     useGlobalPkgs = true;
     users.ryan = {
       imports = [ ../../modules/default.nix ];
-
       config.modules = {
         nvim.enable = true;
         packages.enable = true;

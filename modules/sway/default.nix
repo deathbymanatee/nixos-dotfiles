@@ -19,8 +19,6 @@ in
       foot
       wmenu
       wl-clipboard-rs
-      way-displays
-      wdisplays
       swayidle
       swaylock
       grim
@@ -31,8 +29,26 @@ in
       keepassxc
       vlc
       kdePackages.ark
-      kdePackages.qt6ct
+      kdePackages.breeze
+      kdePackages.breeze-gtk
+      kdePackages.breeze-icons
       gammastep
+      pamixer
+      geeqie
+      brightnessctl
+      playerctl
+      xsettingsd
+      glib
+      gsettings-desktop-schemas
+      gtk3
+      gtk4
+      libsForQt5.qtstyleplugins
+      nwg-look
+      autotiling
+      joplin-desktop
+      waybar
+      networkmanagerapplet
+      blueman
     ];
   };
 }

@@ -15,10 +15,18 @@
       systemd-boot.configurationLimit = 8;
       efi.canTouchEfiVariables = true;
     };
+    kernelPackages = pkgs.linuxPackages_latest;
+    plymouth = {
+      enable = true;
+    };
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "udev.log_level=3"
+      "systemd.show_status=auto"
+    ];
   };
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.networkmanager.enable = true;
 
@@ -44,18 +52,19 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
-    tree
-    clamav
-    neovim
-    wget
-    git
-  ];
-
-  environment.variables = {
-    NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";
-    NIXOS_CONFIG_DIR = "$HOME/.config/nixos/";
-    EDITOR = "nvim";
+  environment = {
+    systemPackages = with pkgs; [
+      tree
+      clamav
+      neovim
+      wget
+      git
+    ];
+    variables = {
+      NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";
+      NIXOS_CONFIG_DIR = "$HOME/.config/nixos/";
+      EDITOR = "nvim";
+    };
   };
 
   nix = {
@@ -69,5 +78,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
-
 }
