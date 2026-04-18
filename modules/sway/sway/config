@@ -20,6 +20,26 @@ set $menu wmenu-run
 
 exec_always gammastep -O 4000
 exec_always autotiling
+exec_always nm-applet
+exec_always dunst
+exec_always soteria
+exec_always blueman-applet
+
+bar swaybar_command waybar
+
+gaps inner 3
+gaps outer 3
+
+corner_radius 10
+
+blur enable
+blur_passes 2
+blur_radius 10
+
+for_window [app_id="foot"] {
+  opacity 0.90
+  dim_inactive 0.15
+}
 
 ### Output configuration
 #
@@ -231,6 +251,21 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
-default_border pixel
+default_border pixel 3
 
-include @sysconfdir@/sway/config.d/*
+include /etc/sway/config.d/*
+
+set $bg             #283e2d
+set $bg-inactive    #120e1200
+set $bg-urgent      #963c64
+set $text-light     #f2d8e988
+set $text-dark      #0b0b0b88
+set $text-inactive  #59485000
+
+# set color theme
+# class                 border        bground       text            indicator     child_border
+client.focused          $bg           $bg           $text-dark      $bg           $bg
+client.focused_inactive $bg-inactive  $bg-inactive  $text-inactive  $bg-inactive  $bg-inactive
+client.unfocused        $bg-inactive  $bg-inactive  $text-inactive  $bg-inactive  $bg-inactive
+client.urgent           $bg-urgent    $bg-urgent    $text-light     $bg-urgent    $bg-urgent
+client.placeholder      $bg-inactive  $bg-inactive  $text-inactive  $bg-inactive  $bg-inactive

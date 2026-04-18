@@ -50,5 +50,17 @@ in
       networkmanagerapplet
       blueman
     ];
+    home.file.".config/sway" = {
+      source = config.lib.file.mkOutOfStoreSymLink "${config.home.homeDirectory}/.config/nixos/modules/sway/sway";
+      recursive = true;
+    };
+    home.file.".config/waybar" = {
+      source = config.lib.file.mkOutOfStoreSymLink "${config.home.homeDirectory}/.config/nixos/modules/sway/waybar";
+      recursive = true;
+    };
+    home.file."Pictures/Wallpapers/Forest_For_The_Trees.jpg" = {
+      source = config.lib.file.mkOutOfStoreSymLink "${config.home.homeDirectory}/.config/nixos/modules/sway/wallpapers/Forest_For_The_Trees.jpg";
+      recursive = true;
+    };
   };
 }
