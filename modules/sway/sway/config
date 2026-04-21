@@ -44,7 +44,7 @@ for_window [app_id="foot"] {
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg '~/Pictures/Wallpapers/Forest For The Trees.jpg' fill
+output * bg '~/Pictures/Wallpapers/Forest_For_The_Trees.jpg' fill
 #
 # Example configuration:
 #
@@ -248,14 +248,17 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-    # Special key to take a screenshot with grim
+    # Special key to take a full screen screenshot with grim
     bindsym Print exec grim
+
+    # Key to screenshot a selected area
+    bindsym $mod+Shift+S exec grim -g "$(slurp)"
 
 default_border pixel 3
 
 include /etc/sway/config.d/*
 
-set $bg             #283e2d
+set $bg             #503f4d
 set $bg-inactive    #120e1200
 set $bg-urgent      #963c64
 set $text-light     #f2d8e988

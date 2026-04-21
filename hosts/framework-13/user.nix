@@ -60,6 +60,7 @@
         game-dev.enable = true;
         audio-prod.enable = true;
         sway.enable = true;
+        foot.enable = true;
       };
     };
   };
