@@ -254,6 +254,9 @@ bindsym $mod+r mode "resize"
     # Key to screenshot a selected area
     bindsym $mod+Shift+S exec grim -g "$(slurp)"
 
+    # Swaylock
+    bindsym $mod+alt+L exec swaylock
+
 default_border pixel 3
 
 include /etc/sway/config.d/*

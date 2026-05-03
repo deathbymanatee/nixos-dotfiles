@@ -3,6 +3,6 @@ sudo nix store verify --all
 sudo nix store repair --all
 cd $NIXOS_CONFIG_DIR
 hostname=$(hostname)
-eval $(ssh-agent)
+git add .
 nix flake update
 sudo nixos-rebuild switch --flake .#$hostname --upgrade

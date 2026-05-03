@@ -10,7 +10,7 @@
     gvfs.enable = true;
     tumbler.enable = true;
     # sudoless brightness controls udev rules
-    # THANKS FOR NOTHING NIXOS WIKI, IT DID NOT "JUST WORK"
+    # THANKS FOR NOTHING NIXOS WIKI, BRIGHTNESSCTL DID NOT "JUST WORK"
     udev.extraRules = ''
       ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chgrp video /sys/class/backlight/%k/brightness"
       ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chmod g+w /sys/class/backlight/%k/brightness"
@@ -96,6 +96,7 @@
     };
     polkit = {
       enable = true;
+      # sudoless power commands
       extraConfig = ''
         polkit.addRule(function (action, subject) {
           if (
@@ -116,6 +117,6 @@
     soteria.enable = true;
   };
 
-  # part sudoless power commands config
+  # group to enable sudoless power commands
   users.groups.power = { };
 }
