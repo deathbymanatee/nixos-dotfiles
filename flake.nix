@@ -11,6 +11,7 @@
       url = "github:4v3ngR/kwin-effects-glass";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs =
@@ -19,6 +20,7 @@
       home-manager,
       nix-ld,
       kwin-effects-glass,
+      nix-flatpak,
       ...
     }:
     {
@@ -40,6 +42,17 @@
             nix-ld.nixosModules.nix-ld
             ./modules/system/configuration.nix
             ./hosts/framework-13/user.nix
+          ];
+        };
+	      home-desktop = nixpkgs.lib.nixosSystem {
+	        system = "x86_64-linux";
+	        specialArgs = { inherit inputs; };
+	        modules = [ 
+            home-manager.nixosModules.home-manager 
+            nix-ld.nixosModules.nix-ld 
+            nix-flatpak.nixosModules.nix-flatpak
+            ./modules/system/configuration.nix 
+            ./hosts/home-desktop/user.nix 
           ];
         };
       };
